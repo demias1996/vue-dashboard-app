@@ -8,6 +8,24 @@
   </div>
 </template>
 
+<script>
+export default {
+  data(){
+    return {
+      test: "test"
+    };
+  },
+  computed:{
+
+  },
+  beforeMount(){
+   this.$store.dispatch('GET_USERS');
+   this.$store.dispatch('GET_ALBUMS');
+   this.$store.dispatch('GET_PHOTOS');
+  }
+}
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
